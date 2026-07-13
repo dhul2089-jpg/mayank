@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telegram Landing Page</title>
+
+<style>
+body{
+    margin:0;
+    background:#000;
+    font-family:Arial,sans-serif;
+    color:#fff;
+    text-align:center;
+}
+
+.container{
+    max-width:400px;
+    margin:auto;
+    padding:30px 20px;
+}
+
+h1{
+    color:#ffe600;
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+h2{
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    border:3px solid #555;
+    object-fit:cover;
+}
+
+p{
+    font-size:24px;
+    margin:30px 0;
+    font-weight:bold;
+}
+
+.join-btn{
+    display:block;
+    background:linear-gradient(to right,#ffe600,#5f5200);
+    color:#fff;
+    text-decoration:none;
+    padding:18px;
+    border-radius:12px;
+    font-size:28px;
+    font-weight:bold;
+    border:2px solid #fff;
+}
+
+.timer{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.box{
+    font-size:24px;
+}
+
+span{
+    display:block;
+    color:#ffe600;
+    font-size:14px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>MAYANK CHAOUDHARY</h1>
+
+<h2></h2>
+
+<img src="profile.jpg">
+
+<p>Join now for exclusive insights and daily tips.</p>
+
+<a class="join-btn" href="https://t.me/+DrNwiRbyteEwMzBl">
+🚀 JOIN NOW FOR FREE
+</a>
+
+<div class="timer">
+<div class="box">00<span>DAYS</span></div>
+<div class="box">00<span>HOURS</span></div>
+<div class="box">00<span>MINUTES</span></div>
+<div class="box" id="sec">60<span>SECONDS</span></div>
+</div>
+
+</div>
+
+<script>
+let sec=60;
+
+setInterval(()=>{
+sec--;
+if(sec<0) sec=60;
+document.getElementById("sec").innerHTML=sec+"<span>SECONDS</span>";
+},1000);
+</script>
+
+</body>
+</html>
